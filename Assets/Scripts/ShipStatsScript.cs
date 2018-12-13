@@ -16,37 +16,22 @@ public class ShipStatsScript : MonoBehaviour
     public TextMeshProUGUI uiAIShield;
     public TextMeshProUGUI uiAIHealth;
 
-    public GameObject crateSpawner;
-
     public float acceleration { get; set; }
     public float maxspeed { get; set; }
     public float health { get; set; }
     public float shield { get; set; }
     public float turnspeed { get; set; }
-    public float pHealthBonus = 500.0f;
-    public float pShieldBonus = 250.0f;
-    public float pTurnBonus = 44500.0f;
-    public float killRank;
 
     private Rigidbody rb;
 
     // Use this for initialization
     void Start()
     {
-        
-        crateSpawner = GameObject.Find("Crate Spawner");
         this.acceleration = Constants.DEFAULTSHIPACCELERATION;
         this.maxspeed = Constants.DEFAULTMAXSHIPSPEED;
         this.turnspeed = Constants.DEFAULTTURNSPEED;
         this.health = Constants.MAXIMUMSHIPHEALTH;
         this.shield = Constants.MAXIMUMSHIPSHIELD;
-    if(this.gameObject.tag == "ship")
-        {
-        this.health = this.health + pHealthBonus;
-        this.shield = this.shield + pShieldBonus;
-        this.turnspeed = this.turnspeed + pTurnBonus;
-        }
-
         rb = GetComponent<Rigidbody>();
     }
 
@@ -68,8 +53,8 @@ public class ShipStatsScript : MonoBehaviour
     void update_ui()
     {
         uiMaxSpeed.text = "MAX speed = " + this.maxspeed.ToString("F1") + "kts";
-        float mps = rb.velocity.z;
-        float knots = mps * Constants.MpS_TO_KNOTS;
+        float fwdSpeed = Vector3.Dot(rb.velocity, transform.forward);
+        float knots = fwdSpeed * Constants.MpS_TO_KNOTS;
         uiCurrentSpeed.text = "CURRENT speed = " + knots.ToString("F1") + "kts";
         uiHealth.text = "Health: " + this.health.ToString("F1");
         uiShield.text = "Shield: " + this.shield.ToString("F1");
@@ -100,9 +85,7 @@ public class ShipStatsScript : MonoBehaviour
 
     void check_if_sinking()
     {
-
         if(health <= 0) {
-            Vector3 deathPos; 
             FloatScript floatScript = GetComponent<FloatScript>();
             floatScript.enabled = false;
             if(gameObject.tag == "aiship") {
@@ -110,16 +93,8 @@ public class ShipStatsScript : MonoBehaviour
                 agent.enabled = false;
             }
             if(transform.position.y < -40.0f) {
-                deathPos = transform.position;
-                CrateSpawnerScript css = crateSpawner.GetComponent<CrateSpawnerScript>();
-                css.spawn_Deathcrate(deathPos);
                 Destroy(gameObject);
             }
         }
-    }
-
-    void spawn_deathGoodies(Vector3 deathPos)
-    {
-        
     }
 }
