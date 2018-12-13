@@ -56,7 +56,7 @@ public class BoatController : MonoBehaviour {
             horizontal = 0.0f;
         }
         
-        transform.Rotate(transform.up * Time.deltaTime * horizontal, Space.Self);
+        transform.Rotate(transform.up * Time.deltaTime * sss.turnspeed * horizontal, Space.Self);
     }
 }
 
