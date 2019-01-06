@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class CrateScript : MonoBehaviour {
 	private float timeRemaining = Constants.CRATETIMEOUT;
-
 	// Use this for initialization
 	void Start () {
 		
 	}
-
     private void OnEnable()
     {
         timeRemaining = Constants.CRATETIMEOUT;
