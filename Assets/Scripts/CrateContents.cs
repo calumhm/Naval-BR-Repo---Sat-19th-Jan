@@ -46,6 +46,8 @@ public class CrateContents : MonoBehaviour {
 	void update_ui() {
 		uiCrateType.text = convert_crate_type();
 		uiCrateValue.text = value.ToString("F1");
+		uiCrateType.transform.rotation = Camera.main.transform.rotation;
+		uiCrateValue.transform.rotation = Camera.main.transform.rotation;
 	}
 
 

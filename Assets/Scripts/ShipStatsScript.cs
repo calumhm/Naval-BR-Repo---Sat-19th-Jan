@@ -15,6 +15,7 @@ public class ShipStatsScript : MonoBehaviour
 
     public TextMeshProUGUI uiAIShield;
     public TextMeshProUGUI uiAIHealth;
+    private GameObject uiAIcanvas;
 
     public float acceleration { get; set; }
     public float maxspeed { get; set; }
@@ -66,6 +67,11 @@ public class ShipStatsScript : MonoBehaviour
     {
         uiAIHealth.text = "Health: " + this.health.ToString("F1");
         uiAIShield.text = "Shield: " + this.shield.ToString("F1");
+        uiAIShield.transform.rotation = Camera.main.transform.rotation;
+        uiAIHealth.transform.rotation = Camera.main.transform.rotation;
+      /*  Vector3 relative = transform.InverseTransformPoint(Camera.position);
+        float angle = Mathf.Atan2(relative.x, relative.y) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, -angle); */
     }
 
     // Week 08 Week08
