@@ -10,7 +10,7 @@ public class PlayerScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		ShipStatsScript sss = this.gameObject.GetComponent<ShipStatsScript>(); 
-		sss.health += sss.health/2;
+		sss.health += sss.health;
 	}
 	
 	// Update is called once per frame
