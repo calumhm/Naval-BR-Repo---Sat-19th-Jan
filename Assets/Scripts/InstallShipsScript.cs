@@ -5,18 +5,22 @@ using UnityEngine;
 public class InstallShipsScript : MonoBehaviour {
 
     public GameObject aiShip;
-    public int AIshipCount;
+
+
+       public int AIshipCount;
+
+[Header("Value of 10 represents Andrew's original scale.")]
     public int scale = 2;
     
 	// Use this for initialization
 	void Start () {
         GameObject newShip;
         Vector3 location;
-        float x;
-        float z, count = 0;
+        int x;
+        int z, count = 0;
         location.y = 4.0f;
-        for (x = -128f*scale; x < 128f*scale; x+=((Mathf.Abs(x*scale))/(float)AIshipCount) ) {
-            for(z = -128f*scale; z < 128f*scale; z+= ((Mathf.Abs(z*scale))/(float)AIshipCount) ) {
+        for (x = -300*scale; x < 300*scale; x+=(150*scale) ) {
+            for(z = -300*scale; z < 300*scale; z+= ((150*scale)) ) {
             //for(z = -1000*scale; z < 1000*scale; z+=200*scale) {
                 // The player's ship starts in the centre!
                 if (x == 0 && z == 0) continue;
