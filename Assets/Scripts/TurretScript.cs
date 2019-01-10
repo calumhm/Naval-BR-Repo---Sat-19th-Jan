@@ -16,6 +16,8 @@ public class TurretScript : MonoBehaviour {
         Component[] shellSpawners;
         shellSpawners = GetComponentsInChildren<ShellSpawnerScript>();
 
+        damage = 20.0f;
+
         foreach(ShellSpawnerScript ss in shellSpawners) {
             ssGOs.Add(ss.gameObject);
         }
@@ -36,8 +38,8 @@ public class TurretScript : MonoBehaviour {
     void fire() {
         RaycastHit hit;
         foreach(GameObject ss in ssGOs) {
-            if(Physics.Raycast(ss.transform.position, ss.transform.forward, out hit, 400.0f)) {
-                if(hit.collider.gameObject.tag == "aiship" || hit.collider.gameObject.tag == "ship") {
+/*             if(Physics.Raycast(ss.transform.position, ss.transform.forward, out hit, 400.0f)) {
+                if(hit.collider.gameObject.tag == "aiship" || hit.collider.gameObject.tag == "ship") { */
                     //GameObject newShell = Instantiate(shell, ss.transform.position, ss.transform.rotation);
                     GameObject newShell = shellHolderScript.get_shell();
                     if(newShell != null) {
@@ -46,8 +48,8 @@ public class TurretScript : MonoBehaviour {
                         ShellScript shellScript = newShell.GetComponent<ShellScript>();
                         shellScript.damage = this.damage * firingFrequency;
                         newShell.SetActive(true);
-                    }
-                }
+/*                     }
+                } */
             }
         }
     }

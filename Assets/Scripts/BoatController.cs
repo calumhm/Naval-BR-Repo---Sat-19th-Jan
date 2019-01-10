@@ -27,7 +27,7 @@ public class BoatController : MonoBehaviour {
         float vertical = Input.GetAxis("Vertical");
         float fwdSpeed = Vector3.Dot(rb.velocity, transform.forward);
 
-        if (Mathf.Abs(fwdSpeed) >= (sss.maxspeed / Constants.MpS_TO_KNOTS)) {
+        if (Mathf.Abs(fwdSpeed) >= (sss.topSpeed / Constants.MpS_TO_KNOTS)) {
             vertical = 0.0f;
         } 
 
@@ -49,7 +49,7 @@ public class BoatController : MonoBehaviour {
         float turnSpeed = sss.turnspeed;
         float horizontal = Input.GetAxis("Horizontal");
         float fwdSpeed = Vector3.Dot(rb.velocity, transform.forward);
-        if (fwdSpeed >= sss.maxspeed) {
+        if (fwdSpeed >= sss.topSpeed) {
             horizontal = 0.0f;
         } 
         if(fwdSpeed < 1.0f) {

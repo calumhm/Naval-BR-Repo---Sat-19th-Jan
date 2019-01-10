@@ -26,7 +26,7 @@ public class InstallNewGuns : MonoBehaviour {
         install_guns();
     }
 
-    // Update is called once per frame
+  
     void install_guns() {
 
         float playerBonus = 0.0f;

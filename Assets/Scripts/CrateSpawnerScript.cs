@@ -22,10 +22,10 @@ public class CrateSpawnerScript : MonoBehaviour
         possibleUpgrades.Add(Constants.UpgradeTypes.SHIELD);
         possibleUpgrades.Add(Constants.UpgradeTypes.SHIELD);
         possibleUpgrades.Add(Constants.UpgradeTypes.SHIELD);
-        possibleUpgrades.Add(Constants.UpgradeTypes.MAXSPEED);
-        possibleUpgrades.Add(Constants.UpgradeTypes.MAXSPEED);
-        possibleUpgrades.Add(Constants.UpgradeTypes.MAXSPEED);
-        possibleUpgrades.Add(Constants.UpgradeTypes.MAXSPEED);
+        possibleUpgrades.Add(Constants.UpgradeTypes.topSpeed);
+        possibleUpgrades.Add(Constants.UpgradeTypes.topSpeed);
+        possibleUpgrades.Add(Constants.UpgradeTypes.topSpeed);
+        possibleUpgrades.Add(Constants.UpgradeTypes.topSpeed);
         possibleUpgrades.Add(Constants.UpgradeTypes.TURNSPEED);
         possibleUpgrades.Add(Constants.UpgradeTypes.TURNSPEED);
     }
@@ -104,7 +104,7 @@ public class CrateSpawnerScript : MonoBehaviour
             {
                 cc.value = de_normalise_value(value, Constants.DEFAULTSHIPACCELERATION, Constants.MAXIMUMSHIPACCELERATION);
             }
-            else if (type == Constants.UpgradeTypes.MAXSPEED)
+            else if (type == Constants.UpgradeTypes.topSpeed)
             {
                 cc.value = de_normalise_value(value, Constants.DEFAULTMAXSHIPSPEED, Constants.MAXIMUMSHIPSPEED);
             }

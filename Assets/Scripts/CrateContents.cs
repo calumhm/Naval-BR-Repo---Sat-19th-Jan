@@ -33,8 +33,8 @@ public class CrateContents : MonoBehaviour {
 			crateTypeString = "HEALTH";
 		} else if(type == Constants.UpgradeTypes.SHIELD) {
 			crateTypeString = "SHIELD";
-		} else if(type == Constants.UpgradeTypes.MAXSPEED) {
-			crateTypeString = "MAXSPEED";
+		} else if(type == Constants.UpgradeTypes.topSpeed) {
+			crateTypeString = "topSpeed";
 		} else if(type == Constants.UpgradeTypes.TURNSPEED) {
 			crateTypeString = "TURNSPEED";
 		} else {

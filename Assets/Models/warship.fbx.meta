@@ -74,7 +74,27 @@ ModelImporter:
     4300020: wind_endCurved%_4
     4300022: engine_barrel_5
     4300024: engine_barrel_6
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _defaultMat
+    second: {fileID: 2100000, guid: 8a0138a5ed9b3b949b254afd6e8198a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: 67ee0c34c765ece4d96f9d84235c83a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blueSteel
+    second: {fileID: 2100000, guid: 8a0138a5ed9b3b949b254afd6e8198a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glass
+    second: {fileID: 2100000, guid: 7e71ff0f7b1de11489a712f0da553c06, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

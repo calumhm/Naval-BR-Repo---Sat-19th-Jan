@@ -6,8 +6,11 @@ public class ShellHolderScript : MonoBehaviour
 {
 
     public GameObject shell;
+    public GameObject exp;
 
     private List<GameObject> availableShells = new List<GameObject>();
+    private List<GameObject> availableExplosions = new List<GameObject>();
+
 
     // Week08 Week 08
     void Start()
@@ -19,6 +22,16 @@ public class ShellHolderScript : MonoBehaviour
             newShell.SetActive(false);
             newShell.transform.parent = transform;
             availableShells.Add(newShell);
+        }
+
+        GameObject newExp;
+        for (int c = 0; c < 10000; c++)
+        {
+            newExp = Instantiate(exp, transform.position, Quaternion.identity);
+            newExp.SetActive(false);
+            newExp.transform.parent = transform;
+            availableExplosions.Add(newExp);
+           // ParticleSystem[] pfx = new ParticleSystem[]{availableExplosions.gameObject.transform.Find()}
         }
     }
 
@@ -44,7 +57,36 @@ public class ShellHolderScript : MonoBehaviour
             oldShell.SetActive(false);
             availableShells.Add(oldShell);
         }
+    }
+public GameObject get_Exp()
+    {
+        if (availableExplosions.Count > 0) {
+            GameObject newExp = availableExplosions[0];
+            availableExplosions.RemoveAt(0);
+            newExp.SetActive(true);
+            Debug.Log("successful get_exp");
+            return newExp;
+        }
+        Debug.Log("availableExplosions.Count = 0");
+        GameObject shinyExp = Instantiate(exp, transform.position, Quaternion.identity);
+        shinyExp.SetActive(true);
+        return shinyExp;
+    }
 
+    // Week08 Week 08
+    public void invoke_return_Exp(GameObject oldExp)
+    {
+        StartCoroutine(return_Exp(oldExp, 1f));
+        
+    }
+    public IEnumerator return_Exp(GameObject oldExp, float delay)
+    {
+       GameObject Exp = availableExplosions.Find(x => x == oldExp);
+        if( !Exp ) {
+            yield return new WaitForSeconds(delay);
+            oldExp.transform.position = transform.position;
+            oldExp.SetActive(false);
+            availableExplosions.Add(oldExp);
+        }
     }
 }
-

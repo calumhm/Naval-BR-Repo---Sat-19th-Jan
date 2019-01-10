@@ -5,6 +5,8 @@ using UnityEngine;
 public static class Constants {
 	// When the game starts, a ship's maximum speed is DEFAULT...
 	//  The highest it can get is MAXIMUM...
+
+	public static readonly float DEFAULTrangeMissFactor = 5.0f;
 	public static readonly float MAXIMUMSHIPSPEED = 100.0f;
 	public static readonly float DEFAULTMAXSHIPSPEED = 45.0f;
 
@@ -31,6 +33,6 @@ public static class Constants {
 
 	public static readonly float MpS_TO_KNOTS = 1.94384f;
 	public enum UpgradeTypes {
-		ACCELERATION, MAXSPEED, HEALTH, SHIELD, TURNSPEED
+		ACCELERATION, topSpeed, HEALTH, SHIELD, TURNSPEED
 	}
 }

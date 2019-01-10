@@ -1,0 +1,238 @@
+fileFormatVersion: 2
+guid: c459fcd4a3b28ef42a9c13f79e3de2d9
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: SE-ALETA
+    100002: SE-ALETD
+    100004: SE-ALETD 1
+    100006: SE-ALETI
+    100008: SE-ALETS
+    100010: SE-ARA
+    100012: SE-CILSA
+    100014: SE-CILST
+    100016: SE-COMPU
+    100018: SE-COMPU 1
+    100020: SE-CUBIE
+    100022: SE-CUERP
+    100024: SE-CUPUL
+    100026: SE-HELI
+    100028: SE-PLANC
+    100030: SE-REMAC
+    100032: SE-SUJTO
+    100034: SE-TOBER
+    100036: SE-TORPD
+    100038: SE-TORPI
+    100040: //RootNode
+    100042: TR5GBLA1
+    100044: TR5GBLAT
+    100046: TR5GBLM1
+    100048: TR5GBLMT
+    100050: TR5GBRS1
+    100052: TR5GBRSS
+    100054: TR5GCPP1
+    100056: TR5GCPP2
+    100058: TR5GCPP3
+    100060: TR5GCPPR
+    400000: SE-ALETA
+    400002: SE-ALETD
+    400004: SE-ALETD 1
+    400006: SE-ALETI
+    400008: SE-ALETS
+    400010: SE-ARA
+    400012: SE-CILSA
+    400014: SE-CILST
+    400016: SE-COMPU
+    400018: SE-COMPU 1
+    400020: SE-CUBIE
+    400022: SE-CUERP
+    400024: SE-CUPUL
+    400026: SE-HELI
+    400028: SE-PLANC
+    400030: SE-REMAC
+    400032: SE-SUJTO
+    400034: SE-TOBER
+    400036: SE-TORPD
+    400038: SE-TORPI
+    400040: //RootNode
+    400042: TR5GBLA1
+    400044: TR5GBLAT
+    400046: TR5GBLM1
+    400048: TR5GBLMT
+    400050: TR5GBRS1
+    400052: TR5GBRSS
+    400054: TR5GCPP1
+    400056: TR5GCPP2
+    400058: TR5GCPP3
+    400060: TR5GCPPR
+    2100000: SE-CUERP
+    2100002: SE-HELI
+    2100004: SE-REMAC
+    2100006: SE-CRIST
+    2100008: TP5GBLPS
+    2100010: SE-DORAD
+    2100012: TP5GBRZ3
+    2300000: SE-ALETA
+    2300002: SE-ALETD
+    2300004: SE-ALETD 1
+    2300006: SE-ALETI
+    2300008: SE-ALETS
+    2300010: SE-ARA
+    2300012: SE-CILSA
+    2300014: SE-CILST
+    2300016: SE-COMPU 1
+    2300018: SE-CUBIE
+    2300020: SE-CUERP
+    2300022: SE-CUPUL
+    2300024: SE-HELI
+    2300026: SE-PLANC
+    2300028: SE-REMAC
+    2300030: SE-SUJTO
+    2300032: SE-TOBER
+    2300034: TR5GBLA1
+    2300036: TR5GBLAT
+    2300038: TR5GBLM1
+    2300040: TR5GBLMT
+    2300042: TR5GBRS1
+    2300044: TR5GBRSS
+    2300046: TR5GCPP1
+    2300048: TR5GCPP2
+    2300050: TR5GCPP3
+    2300052: TR5GCPPR
+    3300000: SE-ALETA
+    3300002: SE-ALETD
+    3300004: SE-ALETD 1
+    3300006: SE-ALETI
+    3300008: SE-ALETS
+    3300010: SE-ARA
+    3300012: SE-CILSA
+    3300014: SE-CILST
+    3300016: SE-COMPU 1
+    3300018: SE-CUBIE
+    3300020: SE-CUERP
+    3300022: SE-CUPUL
+    3300024: SE-HELI
+    3300026: SE-PLANC
+    3300028: SE-REMAC
+    3300030: SE-SUJTO
+    3300032: SE-TOBER
+    3300034: TR5GBLA1
+    3300036: TR5GBLAT
+    3300038: TR5GBLM1
+    3300040: TR5GBLMT
+    3300042: TR5GBRS1
+    3300044: TR5GBRSS
+    3300046: TR5GCPP1
+    3300048: TR5GCPP2
+    3300050: TR5GCPP3
+    3300052: TR5GCPPR
+    4300000: SE-SUJTO
+    4300002: SE-ALETS
+    4300004: SE-CILSA
+    4300006: SE-TOBER
+    4300008: SE-HELI
+    4300010: SE-ALETA
+    4300012: SE-ARA
+    4300014: SE-CUBIE
+    4300016: SE-PLANC
+    4300018: SE-REMAC
+    4300020: SE-ALETI
+    4300022: SE-CUERP
+    4300024: SE-COMPU
+    4300026: SE-CUPUL
+    4300028: SE-ALETD
+    4300030: SE-ALETD
+    4300032: TR5GBLA1
+    4300034: TR5GBLM1
+    4300036: TR5GBRS1
+    4300038: TR5GCPP1
+    4300040: TR5GCPP3
+    4300042: TR5GBLAT
+    4300044: TR5GBLMT
+    4300046: TR5GBRSS
+    4300048: TR5GCPP2
+    4300050: TR5GCPPR
+    4300052: SE-CILST
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
