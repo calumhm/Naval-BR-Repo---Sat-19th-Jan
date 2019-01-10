@@ -27,7 +27,7 @@ public class TurretScript : MonoBehaviour {
         } else {
             firingFrequency = 1.0f;
         }
-        InvokeRepeating("fire", 0.0f, Random.Range(firingFrequency-0.1f, firingFrequency+0.1f));
+        //InvokeRepeating("fire", 0.0f, Random.Range(firingFrequency-0.1f, firingFrequency+0.1f));
 
         // Get the shell holder object
         GameObject shellHolder = GameObject.Find("ShellHolderObject");
@@ -46,7 +46,7 @@ public class TurretScript : MonoBehaviour {
                         newShell.transform.position = ss.transform.position;
                         newShell.transform.rotation = ss.transform.rotation;
                         ShellScript shellScript = newShell.GetComponent<ShellScript>();
-                        shellScript.damage = this.damage * firingFrequency;
+                        shellScript.damage *= firingFrequency;
                         newShell.SetActive(true);
 /*                     }
                 } */
