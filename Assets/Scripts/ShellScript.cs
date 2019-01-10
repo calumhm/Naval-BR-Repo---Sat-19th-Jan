@@ -15,7 +15,7 @@ public class ShellScript : MonoBehaviour {
 	public GameObject splashPref;
     ParticleSystem[] pfx; 
 
-    public float damage { get; set; }
+    public float damage = 20;
     private Rigidbody rb;
     private ShellHolderScript shellHolderScript;
 
@@ -44,7 +44,7 @@ public class ShellScript : MonoBehaviour {
         rb.AddForce(transform.forward * Constants.SHELLFORCE, ForceMode.Impulse);
     }
 
-    void OnTriggerEnter(Collider col)
+    void OnCollisionEnter(Collision col)
 	{
 		
 
@@ -59,10 +59,10 @@ public class ShellScript : MonoBehaviour {
 		{
 			
             ShipStatsScript sss = col.gameObject.GetComponent<ShipStatsScript>();
-            //ContactPoint cont = col.contacts[0];   // new ContactPoint 
-			exp = (shellHolderScript.get_Exp());
-            //exp.transform.position = cont.point;
-            exp.transform.position = gameObject.transform.position;
+            ContactPoint cont = col.contacts[0];   // new ContactPoint 
+			exp = shellHolderScript.get_Exp();
+            exp.transform.position = cont.point;
+           // exp.transform.position = gameObject.transform.position;
 
 			
 			shellHolderScript.invoke_return_Exp(exp);
