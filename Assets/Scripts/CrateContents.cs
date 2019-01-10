@@ -12,11 +12,11 @@ public class CrateContents : MonoBehaviour {
 	public float value { get; set; }
 
 
-	
+	Quaternion test;
 
 	// Use this for initialization
 	void Start () {
-	
+		test = Camera.main.transform.rotation;
 	}
 	
 	// Update is called once per frame
@@ -46,8 +46,9 @@ public class CrateContents : MonoBehaviour {
 	void update_ui() {
 		uiCrateType.text = convert_crate_type();
 		uiCrateValue.text = value.ToString("F1");
-		uiCrateType.transform.rotation = Camera.main.transform.rotation;
-		uiCrateValue.transform.rotation = Camera.main.transform.rotation;
+		uiCrateType.transform.rotation = test; 
+		
+		uiCrateValue.transform.rotation = test;
 	}
 
 
