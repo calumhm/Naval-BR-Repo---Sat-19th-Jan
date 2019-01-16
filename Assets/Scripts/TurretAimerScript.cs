@@ -114,7 +114,7 @@ public class TurretAimerScript : MonoBehaviour {
            // }
         }
 
-        hitsFront = Physics.SphereCastAll(transform.position, 50.0f, -transform.right, 400.0f, layerMask);
+        hitsFront = Physics.SphereCastAll(transform.position, 50.0f, transform.forward, 400.0f, layerMask);
         
         foreach(RaycastHit hit in hitsFront) {
            // if(hit.distance >= 55.0f) {
