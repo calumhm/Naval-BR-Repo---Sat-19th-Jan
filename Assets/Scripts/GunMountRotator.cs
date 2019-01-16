@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class GunMountRotator : MonoBehaviour {
 private float targetRange;
-public float rangeMissFactor = 1.5f; //This editable var defines the extend to which range causes the guns to be innacurate
+[Header("Range-Driven innacuracy factor")]
+[RangeAttribute(0.005f, 1.2f)]
+
+public float rangeMissFactor = 0.3f; //This editable var defines the extend to which range causes the guns to be innacurate
 protected TurretAimerScript tas;
 GameObject parentGO; 
 GameObject debugGO;
@@ -37,7 +40,7 @@ Debugs debugScript;
         }
         targetPos.z = targetPos.z + Random.Range(-targetRange*rangeMissFactor, targetRange*rangeMissFactor);
         //targetPos.y = transform.position.y + Random.Range(-targetRange*rangeMissFactor*0.25f, targetRange*rangeMissFactor*0.25f);
-        targetPos.x = targetPos.z + Random.Range(-targetRange*rangeMissFactor, targetRange*rangeMissFactor);
+        targetPos.x = targetPos.x + Random.Range(-targetRange*rangeMissFactor, targetRange*rangeMissFactor);
         transform.LookAt(targetPos);
         
         //Debug.DrawRay(transform.position,  Color.green, 0.3f, false);
