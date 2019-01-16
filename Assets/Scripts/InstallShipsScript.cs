@@ -23,6 +23,7 @@ public class InstallShipsScript : MonoBehaviour {
             for(z = -300*scale; z < 300*scale; z+= ((150*scale)) ) {
             //for(z = -1000*scale; z < 1000*scale; z+=200*scale) {
                 // The player's ship starts in the centre!
+
                 if (x == 0 && z == 0) continue;
                 
                 location.x = x + Random.Range(-100.0f, +100.0f);
@@ -32,6 +33,9 @@ public class InstallShipsScript : MonoBehaviour {
                 ++count;
                 newShip.gameObject.name = ("AI Ship No." + count);
                 newShip.transform.parent = transform;
+                if(count >= AIshipCount){
+                    return;
+                }
             }
         }
 	}

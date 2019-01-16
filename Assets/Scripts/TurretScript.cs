@@ -37,19 +37,25 @@ public class TurretScript : MonoBehaviour {
 
     void fire() {
         RaycastHit hit;
+        GameObject newShell;
         foreach(GameObject ss in ssGOs) {
-/*             if(Physics.Raycast(ss.transform.position, ss.transform.forward, out hit, 400.0f)) {
-                if(hit.collider.gameObject.tag == "aiship" || hit.collider.gameObject.tag == "ship") { */
-                    //GameObject newShell = Instantiate(shell, ss.transform.position, ss.transform.rotation);
-                    GameObject newShell = shellHolderScript.get_shell();
+             if(Physics.Raycast(ss.transform.position, ss.transform.forward, out hit, 400.0f)) {
+                if(hit.collider.gameObject.tag == "aiship" || hit.collider.gameObject.tag == "ship") { 
+
+                    newShell = shellHolderScript.get_shell();
                     if(newShell != null) {
                         newShell.transform.position = ss.transform.position;
                         newShell.transform.rotation = ss.transform.rotation;
                         ShellScript shellScript = newShell.GetComponent<ShellScript>();
                         shellScript.damage *= firingFrequency;
                         newShell.SetActive(true);
-/*                     }
-                } */
+                     }else{
+                        newShell = Instantiate(shell, ss.transform.position, ss.transform.rotation);
+                        ShellScript shellScript = newShell.GetComponent<ShellScript>();
+                        shellScript.damage *= firingFrequency;
+                        newShell.SetActive(true);
+                     }
+                } 
             }
         }
     }
