@@ -6,7 +6,7 @@ public static class Constants {
 	// When the game starts, a ship's maximum speed is DEFAULT...
 	//  The highest it can get is MAXIMUM...
 
-	public static readonly float DEFAULTrangeMissFactor = 5.0f;
+	public static readonly float DEFAULTrangeMissFactor = 0.5f;
 	public static readonly float MAXIMUMSHIPSPEED = 100.0f;
 	public static readonly float DEFAULTMAXSHIPSPEED = 45.0f;
 

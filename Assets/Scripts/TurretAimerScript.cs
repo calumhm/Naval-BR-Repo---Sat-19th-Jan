@@ -40,13 +40,16 @@ public class TurretAimerScript : MonoBehaviour {
 
   
         //sideGunTurret = sideGunMount00.transform.Find("SideGuns/SideGunMount01/SideTurret(Clone)/Barrels").gameObject;
-      /*   turretScripts = new TurretScript[] {transform.Find("SideGuns/SideGunMount00/SideTurret(Clone)/TurretScript"), 
-            transform.Find("SideGuns/SideGunMount01/SideTurret(Clone)/TurretScript"), 
-            transform.Find("SideGuns/SideGunMount02/SideTurret(Clone)/TurretScript"), 
-            transform.Find("SideGuns/SideGunMount03/SideTurret(Clone)/TurretScript"), 
-            transform.Find("SideGuns/SideGunMount04/SideTurret(Clone)/TurretScript"), 
-            transform.Find("SideGuns/SideGunMount05/SideTurret(Clone)/TurretScript")};
- */     sideGunMount00 = transform.Find("SideGuns/SideGunMount00");
+         turretScripts = new TurretScript[] {
+            transform.Find("SideGuns/SideGunMount00/SideTurret(Clone)").GetComponent<TurretScript>(), 
+            transform.Find("SideGuns/SideGunMount01/SideTurret(Clone)").GetComponent<TurretScript>(), 
+            transform.Find("SideGuns/SideGunMount02/SideTurret(Clone)").GetComponent<TurretScript>(), 
+            transform.Find("SideGuns/SideGunMount03/SideTurret(Clone)").GetComponent<TurretScript>(), 
+            transform.Find("SideGuns/SideGunMount04/SideTurret(Clone)").GetComponent<TurretScript>(), 
+            transform.Find("SideGuns/SideGunMount05/SideTurret(Clone)").GetComponent<TurretScript>()
+            };
+
+      sideGunMount00 = transform.Find("SideGuns/SideGunMount00");
         sideGunMount01 = transform.Find("SideGuns/SideGunMount01");
         sideGunMount02 = transform.Find("SideGuns/SideGunMount02");
         sideGunMount03 = transform.Find("SideGuns/SideGunMount03");
@@ -82,9 +85,9 @@ public class TurretAimerScript : MonoBehaviour {
                     sideGunMount02.SendMessage("Calibrate_Gun", m_params, SendMessageOptions.DontRequireReceiver);
                     sideGunMount04.SendMessage("Calibrate_Gun", m_params, SendMessageOptions.DontRequireReceiver);
 
-                    sideGunMount00.SendMessage("Fire", SendMessageOptions.DontRequireReceiver);
-                    sideGunMount02.SendMessage("Fire", SendMessageOptions.DontRequireReceiver);
-                    sideGunMount04.SendMessage("Fire", SendMessageOptions.DontRequireReceiver);
+                    turretScripts[0].SendMessage("fire", range, SendMessageOptions.DontRequireReceiver);
+                    turretScripts[2].SendMessage("fire", range, SendMessageOptions.DontRequireReceiver);
+                    turretScripts[4].SendMessage("fire", range, SendMessageOptions.DontRequireReceiver);
                 }
            // }
         }
@@ -107,9 +110,9 @@ public class TurretAimerScript : MonoBehaviour {
                     sideGunMount03.SendMessage("Calibrate_Gun", m_params, SendMessageOptions.DontRequireReceiver);
                     sideGunMount05.SendMessage("Calibrate_Gun", m_params, SendMessageOptions.DontRequireReceiver);
 
-                    sideGunMount01.SendMessage("Fire", m_params, SendMessageOptions.DontRequireReceiver);
-                    sideGunMount03.SendMessage("Fire", m_params, SendMessageOptions.DontRequireReceiver);
-                    sideGunMount05.SendMessage("Fire", m_params, SendMessageOptions.DontRequireReceiver);
+                    turretScripts[1].SendMessage("fire", range,SendMessageOptions.DontRequireReceiver);
+                    turretScripts[3].SendMessage("fire", range,SendMessageOptions.DontRequireReceiver);
+                    turretScripts[5].SendMessage("fire", range,SendMessageOptions.DontRequireReceiver);
                 }
            // }
         }
@@ -133,7 +136,7 @@ public class TurretAimerScript : MonoBehaviour {
                     m_params.tPos = hit.point;
 
                     frontGunMount00.SendMessage("Calibrate_Gun", m_params, SendMessageOptions.DontRequireReceiver);
-                    frontGunMount00.SendMessage("Fire", SendMessageOptions.DontRequireReceiver);
+                    frontGunMount00.SendMessage("fire", range, SendMessageOptions.DontRequireReceiver);
 
    
    

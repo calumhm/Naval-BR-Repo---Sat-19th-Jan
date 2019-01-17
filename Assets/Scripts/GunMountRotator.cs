@@ -17,7 +17,7 @@ Debugs debugScript;
     private void Start() {
         debugGO = GameObject.Find("DebugOptions").gameObject;
         debugScript = debugGO.GetComponent<Debugs>();
-        rangeMissFactor = Constants.DEFAULTrangeMissFactor; // Allows for an accuracy upgrade later on, if I have time!
+     //   rangeMissFactor = Constants.DEFAULTrangeMissFactor; // Allows for an accuracy upgrade later on, if I have time!
     }
 
     void Calibrate_Gun (ObjectParameters targetParams) //This new Function is now called by SendMessage, as it only reqs 1 parameter
