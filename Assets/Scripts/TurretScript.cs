@@ -35,10 +35,12 @@ public class TurretScript : MonoBehaviour {
     }
 	
 
-    void fire() {
+    void fire(float range) {
         RaycastHit hit;
         GameObject newShell;
         foreach(GameObject ss in ssGOs) {
+
+            Debug.DrawRay(ss.transform.position, (ss.transform.forward*range), Color.blue, 0.3f, depthTest: false);
              if(Physics.Raycast(ss.transform.position, ss.transform.forward, out hit, 400.0f)) {
                 if(hit.collider.gameObject.tag == "aiship" || hit.collider.gameObject.tag == "ship") { 
 
@@ -54,8 +56,10 @@ public class TurretScript : MonoBehaviour {
                         ShellScript shellScript = newShell.GetComponent<ShellScript>();
                         shellScript.damage *= firingFrequency;
                         newShell.SetActive(true);
-                     }
+                     } 
+                     
                 } 
+                
             }
         }
     }

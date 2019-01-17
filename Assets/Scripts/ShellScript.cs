@@ -61,6 +61,7 @@ public class ShellScript : MonoBehaviour {
             ShipStatsScript sss = col.gameObject.GetComponent<ShipStatsScript>();
             ContactPoint cont = col.contacts[0];   // new ContactPoint 
 			exp = shellHolderScript.get_Exp();
+            if(!exp){ Debug.Log("Exp is null"); }
             exp.transform.position = cont.point;
            // exp.transform.position = gameObject.transform.position;
 
